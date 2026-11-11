@@ -1004,7 +1004,7 @@ html.fx .ck-hl.is-in { transition:background-size .4s ease-out 1s; }
   function showQuestion() {
     const test = tests[testIndex];
     drawBoxes(test.items.length);
-    body.innerHTML = '<p class="check-q">' + esc(test.items[step].q) + '</p><div class="check-answers"><button type="button" data-score="2">네</button><button type="button" data-score="1">애매해요</button><button type="button" data-score="0">아니요</button></div>' + (trade === 'food' ? '' : '<p class="check-note">질문의 메뉴는 우리 매장의 상품이나 서비스로 바꿔서 생각해 주세요.</p>') + (step ? '<button class="check-back" type="button">이전 질문</button>' : '');
+    body.innerHTML = '<p class="check-q">' + esc(test.items[step].q) + '</p><div class="check-answers"><button type="button" data-score="2">네</button><button type="button" data-score="0">아니요</button><button type="button" data-score="1">모르겠어요</button></div>' + (trade === 'food' ? '' : '<p class="check-note">질문의 메뉴는 우리 매장의 상품이나 서비스로 바꿔서 생각해 주세요.</p>') + (step ? '<button class="check-back" type="button">이전 질문</button>' : '');
     body.scrollTop = 0;
     body.focus({ preventScroll: true });
   }
